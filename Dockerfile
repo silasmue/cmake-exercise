@@ -3,6 +3,7 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# install necessary packages, this step can take a while
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
@@ -19,6 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libdeal.ii-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# install yaml-cpp from GitHub (v.0.6.3)
 WORKDIR /tmp
 RUN wget -q https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.6.3.zip -O yaml-cpp.zip \
  && unzip yaml-cpp.zip \
