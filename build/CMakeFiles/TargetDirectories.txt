@@ -1,3 +1,0 @@
-/opt/cmake-exercise/build/CMakeFiles/main.dir
-/opt/cmake-exercise/build/CMakeFiles/edit_cache.dir
-/opt/cmake-exercise/build/CMakeFiles/rebuild_cache.dir
